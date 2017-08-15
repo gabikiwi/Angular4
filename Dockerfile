@@ -1,5 +1,8 @@
 #  Create a new image from the base nodejs 7 image.
 FROM node:7
+
+MAINTAINER Gabriel Chivoiu
+
 # Create the target directory in the imahge
 RUN mkdir -p /usr/src/app
 # Set the created directory as the working directory
