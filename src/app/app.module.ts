@@ -1,42 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { RouterModule } from '@angular/router';
-
-
 import { AppComponent } from './app.component';
-import { MyComponentComponent } from './my-component/my-component.component';
-import { ProductComponent } from './product/product.component';
-import { MembersComponent } from './members/members.component';
+import { TransactionComponent } from './transaction/transaction.component';
+import { FormsModule } from '@angular/forms';
+import { LedgerComponent } from './ledger/ledger.component';
+import { TransactionService } from './transaction.service';
+import { ChartModule } from 'angular2-chartjs';
 
 @NgModule({
-	declarations: [
-		AppComponent,
-		MyComponentComponent,
-		ProductComponent,
-		MembersComponent
-	],
-	imports: [
-		BrowserModule,
-		FormsModule,
-		HttpModule,
-		RouterModule.forRoot([
-			{
-				path:'member',
-				component:MembersComponent
-			},
-
-			{
-				path:'product',
-				component:ProductComponent
-			}
-
-		])
-	],
-	providers: [],
-	bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    TransactionComponent,
+    LedgerComponent
+  ],
+  imports: [
+    BrowserModule,
+	FormsModule,
+	HttpModule,
+	ChartModule
+  ],
+  providers: [
+	TransactionService
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

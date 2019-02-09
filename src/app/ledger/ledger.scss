@@ -1,0 +1,37 @@
+table#ledger {
+	border-collapse: collapse;
+	width: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .80em;
+	cursor: pointer;
+	color: #292626;
+
+	tr:hover {
+		background-color: darkBlue !important;
+		color: white;
+	}
+
+	tr.odd {
+		background-color: lightBlue;
+	}
+
+	td {
+		border: 1px solid grey;
+		padding: .2em;
+	}
+
+	td:nth-child(1) {
+		width: 65px;
+	}
+
+	td:nth-child(2) {
+		width: auto;
+	}
+	td:nth-child(4) {
+		width: 70px;
+	}
+	td:nth-child(4) {
+		width: 70px;
+		text-align: right;
+	}
+}
